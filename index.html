@@ -28,7 +28,7 @@
       title="Speech Research"
     />
     <!-- <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> -->
-    <title>TangoFlux</title>
+    <title>FastSpeech2PromptGuidance</title>
     <style>
       figcaption {
         color: inherit;
@@ -74,13 +74,11 @@
           <br />
           <h1 itemprop="headline" align="center">
             <font color="000093" size="7">
-                <span style="font-size: 50px; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 41px; color: #6E93E6;">A</span><span style="font-size: 41px; color: #4A8A5C;">N</span><span style="font-size: 41px; color: #55AFAA;">G</span><span style="font-size: 41px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 41px; color: #993CAC;">L</span><span style="font-size: 41px; color: #C183C8;">U</span><span style="font-size: 41px; color: #B683BB;">X</span> </span>
-                : Super Fast and Faithful Text to Audio Generation with
-              Flow Matching and Clap-Ranked Preference Optimization
+              Emotion and Intensity Regulated Text-to-Speech Synthesis Through Prompt Guidance
             </font>
           </h1>
           <br />
-          <p style="line-height: 1" align="center">
+          <!-- <p style="line-height: 1" align="center">
             <b>
               <span class="author-block">
                 <a href="https://hungchiayu1.github.io/">Chia-Yu Hung</a><sup>1</sup></span>
@@ -98,11 +96,11 @@
                         <span class="author-block">
                           <a href="https://soujanyaporia.github.io/">Soujanya Poria</a><sup>1</sup></span>
             </b>
-          </p>
+          </p> -->
           <!--           <p style="line-height:1" align="center"><b>
               <font color="061E61">Danilo Mandic<sup>2</sup>, Wenwu Wang<sup>1</sup>, Mark D. Plumley<sup>1</sup></font>
             </b></p> -->
-          <p style="line-height: 0.6" align="center">
+          <!-- <p style="line-height: 0.6" align="center">
             <font color="061E61"
               ><sup>1</sup>DeCLaRe Lab, Singapore University of Technology and
               Design, Singapore</font
@@ -127,7 +125,7 @@
   <a href="https://github.com/declare-lab/TangoFlux">
     <img src="https://img.shields.io/badge/Github-brown?logo=github&link=https%3A%2F%2Fgithub.com%2Fdeclare-lab%2FTangoFlux" alt="Static Badge">
   </a>
-          </p>
+          </p> -->
           <!--          <p style="line-height:0.6" align="center">
             <font color="061E61"> <sup>2</sup>Department of EEE, Imperial College London, London, UK</font>
           </p>
@@ -147,31 +145,15 @@
             </h2>
             <p style="text-align: justify">
               <font color="061E61">
-                We introduce
-                <span style="font-size: 24; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 19px; color: #6E93E6;">A</span><span style="font-size: 19px; color: #4A8A5C;">N</span><span style="font-size: 19px; color: #55AFAA;">G</span><span style="font-size: 19px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 19px; color: #993CAC;">L</span><span style="font-size: 19px; color: #C183C8;">U</span><span style="font-size: 19px; color: #B683BB;">X</span> </span>
-                , an efficient Text-to-Audio (TTA)
-                generative model with 515M parameters, capable of generating up
-                to 30 seconds of 44.1kHz audio in just 3.7 seconds on a single
-                A40 GPU. A key challenge in aligning TTA models lies in the
-                difficulty of creating preference pairs, as TTA lacks structured
-                mechanisms like verifiable rewards or gold-standard answers
-                available for Large Language Models (LLMs). To address this, we
-                propose CLAP-Ranked Preference Optimization (CRPO), a novel
-                framework that iteratively generates and optimizes preference
-                data to enhance TTA alignment. We demonstrate that the audio
-                preference dataset generated using CRPO outperforms existing
-                alternatives. With this framework, <span style="font-size: 24; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 19px; color: #6E93E6;">A</span><span style="font-size: 19px; color: #4A8A5C;">N</span><span style="font-size: 19px; color: #55AFAA;">G</span><span style="font-size: 19px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 19px; color: #993CAC;">L</span><span style="font-size: 19px; color: #C183C8;">U</span><span style="font-size: 19px; color: #B683BB;">X</span> </span> achieves
-                state-of-the-art performance across both objective and
-                subjective benchmarks. We open source all code and models to
-                support further research in TTA generation.
+                Achieving natural, emotionally expressive speech synthesis remains challenging due to the scarcity of high-quality annotations and the intricate interplay among prosodic, emotional, and linguistic features. In this work, we propose a novel framework that extends FastSpeech2 by integrating prompt-based prosody control with dual HuBERT encoders for robust emotion and intensity extraction. By harnessing GPT-4–driven prompts, our model dynamically adjusts pitch, duration, and energy at both the utterance and word levels. Objective evaluations reveal that incorporating local-level prompt control significantly enhances emotion classification accuracy, underscoring the efficacy of our approach. Furthermore, a speaker-specific ranking function refines intensity predictions, reducing reliance on scarce labels and manual heuristics.
               </font>
             </p>
 
-            <h2 id="note">
+            <!-- <h2 id="note">
               <font color="000093">Salient Features</font>
 
             </h2>
-            <li> 🚀 <span style="font-size: 24; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 19px; color: #6E93E6;">A</span><span style="font-size: 19px; color: #4A8A5C;">N</span><span style="font-size: 19px; color: #55AFAA;">G</span><span style="font-size: 19px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 19px; color: #993CAC;">L</span><span style="font-size: 19px; color: #C183C8;">U</span><span style="font-size: 19px; color: #B683BB;">X</span> </span> can generate up to 30 seconds long 44.1kHz stereo audios in about 3 seconds on an A40 GPU. </li>
+            <li> 🚀 <span style="font-size: 24; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 19px; color: #6E93E6;">A</span><span style="font-size: 19px; color: #4A8A5C;">N</span><span style="font-size: 19px; color: #55AFAA;">G</span><span style="font-size: 19px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 19px; color: #993CAC;">L</span><span style="font-size: 19px; color: #C183C8;">U</span><span style="font-size: 19px; color: #B683BB;">X</span> </span> can generate up to 30 seconds long 44.1kHz stereo audios in about 3 seconds on an A40 GPU. </li> -->
             
               
           
@@ -216,22 +198,22 @@
                     <!-- </div> -->
                   </th>
                   
-                  <th style="font-size: 18px;">Stable Audio Open</th>
-                  <th style="font-size: 18px;">TANGO 2</th>
-                  <th style="font-size: 18px;">AudioLDM2</th>
-                  <th style="font-size: 18px;">AudioBox</th>
-                  <th style="font-size: 20px; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 16px; color: #6E93E6;">A</span><span style="font-size: 16px; color: #4A8A5C;">N</span><span style="font-size: 16px; color: #55AFAA;">G</span><span style="font-size: 16px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 16px; color: #993CAC;">L</span><span style="font-size: 16px; color: #C183C8;">U</span><span style="font-size: 16px; color: #B683BB;">X</span> (Ours)</th>
+                  <th style="font-size: 20px;">Daft-Exprt</th>
+                  <th style="font-size: 20px;">FastSpeech2</th>
+                  <th style="font-size: 20px;">FastSpeech2-L</th>
+                  <th style="font-size: 20px;">FastSpeech2-G&L</th>
+                  <!-- <th style="font-size: 20px; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 16px; color: #6E93E6;">A</span><span style="font-size: 16px; color: #4A8A5C;">N</span><span style="font-size: 16px; color: #55AFAA;">G</span><span style="font-size: 16px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 16px; color: #993CAC;">L</span><span style="font-size: 16px; color: #C183C8;">U</span><span style="font-size: 16px; color: #B683BB;">X</span> (Ours)</th> -->
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td style="font-size: 20px;">
-                    Melodic human whistling harmonizing with natural birdsong
+                    <span style="color: #db1f1f;">(Angry)</span> I can't believe the nerve of some people
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/stable_audio3.wav"
+                        src="./samples/0012_Angry_0_Daft-Exprt.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -239,14 +221,14 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/tango2_3.wav" type="audio/wav" />
+                      <source src="./samples/0012_Angry_0_FS2_wEI.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/audioldm2_3.wav"
+                        src="./samples/0012_Angry_0_FS2_wEI-L.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -254,30 +236,19 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/audiobox_3.wav" type="audio/wav" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </td>
-                  <td>
-                    <audio controls="controls" style="width: 150px;">
-                      <source
-                        src="./samples/tangoflux_3.wav"
-                        type="audio/wav"
-                      />
+                      <source src="./samples/0012_Angry_0_FS2_wEI-G&L.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                 </tr>
                 <tr>
                   <td style="font-size: 20px;">
-                    A basketball bounces rhythmically on a court, shoes squeak
-                    against the floor, and a referee’s whistle cuts through the
-                    air.
+                    <span style="color: #db1f1f;">(Angry)</span> This injustice burns me up inside.
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/stable_audio1.wav"
+                        src="./samples/0014_Angry_1_Daft-Exprt.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -285,14 +256,14 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/tango2_1.wav" type="audio/wav" />
+                      <source src="./samples/0014_Angry_1_FS2_wEI.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/audioldm2_1.wav"
+                        src="./samples/0014_Angry_1_FS2_wEI-L.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -300,30 +271,19 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/audiobox_1.wav" type="audio/wav" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </td>
-                  <td>
-                    <audio controls="controls" style="width: 150px;">
-                      <source
-                        src="./samples/tangoflux_1.wav"
-                        type="audio/wav"
-                      />
+                      <source src="./samples/0014_Angry_1_FS2_wEI-G&L.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                 </tr>
                 <tr>
                   <td style="font-size: 20px;">
-                    Dripping water echoes sharply, a distant growl reverberates
-                    through the cavern, and soft scraping metal suggests
-                    something lurking unseen.
+                    <span style="color: #43d90d;">(Happy)</span> Everything just seems so bright and wonderful today.
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/stable_audio5.wav"
+                        src="./samples/0016_Happy_2_Daft-Exprt.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -331,14 +291,14 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/tango2_5.wav" type="audio/wav" />
+                      <source src="./samples/0016_Happy_2_FS2_wEI.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/audioldm2_5.wav"
+                        src="./samples/0016_Happy_2_FS2_wEI-L.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -346,30 +306,19 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/audiobox_5.wav" type="audio/wav" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </td>
-                  <td>
-                    <audio controls="controls" style="width: 150px;">
-                      <source
-                        src="./samples/tangoflux_5.wav"
-                        type="audio/wav"
-                      />
+                      <source src="./samples/0016_Happy_2_FS2_wEI-G&L.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                 </tr>
                 <tr>
                   <td style="font-size: 20px;">
-                    A train conductor blows a sharp whistle, metal wheels
-                    screech on the rails, and passengers murmur while settling
-                    into their seats
+                    <span style="color: #43d90d;">(Happy)</span> I can't stop smiling because of this amazing news.
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/stable_audio2.wav"
+                        src="./samples/0018_Happy_3_Daft-Exprt.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -377,14 +326,14 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/tango2_2.wav" type="audio/wav" />
+                      <source src="./samples/0019_Sad_4_FS2_wEI.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/audioldm2_2.wav"
+                        src="./samples/0019_Sad_4_FS2_wEI-L.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -392,28 +341,19 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/audiobox_2.wav" type="audio/wav" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </td>
-                  <td>
-                    <audio controls="controls" style="width: 150px;">
-                      <source
-                        src="./samples/tangoflux_2.wav"
-                        type="audio/wav"
-                      />
+                      <source src="./samples/0019_Sad_4_FS2_wEI-G&L.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                 </tr>
                 <tr>
                   <td style="font-size: 20px;">
-                    A pile of coins spills onto a wooden table with a metallic clatter, followed by the hushed murmur of a tavern crowd and the creak of a swinging door.
+                    <span style="color: #0d6fde;">(Sad)</span> I never knew silence could be so loud until now.
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/stable_audio7.wav"
+                        src="./samples/0013_Sad_1_Daft-Exprt.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -421,14 +361,14 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/tango2_7.wav" type="audio/wav" />
+                      <source src="./samples/0013_Sad_1_FS2_wEI.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/audioldm2_7.wav"
+                        src="./samples/0013_Sad_1_FS2_wEI-L.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -436,28 +376,19 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/audiobox_7.wav" type="audio/wav" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  </td>
-                  <td>
-                    <audio controls="controls" style="width: 150px;">
-                      <source
-                        src="./samples/tangoflux_7.wav"
-                        type="audio/wav"
-                      />
+                      <source src="./samples/0013_Sad_1_FS2_wEI-G&L.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                 </tr>
                 <tr>
                   <td style="font-size: 20px;">
-                    The deep growl of an alligator ripples through the swamp as reeds sway with a soft rustle and a turtle splashes into the murky water.
+                    <span style="color: #0d6fde;">(Sad)</span> Every song seems to remind me of what we've lost.
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/stable_audio6.wav"
+                        src="./samples/0019_Sad_4_Daft-Exprt.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -465,14 +396,14 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/tango2_6.wav" type="audio/wav" />
+                      <source src="./samples/0019_Sad_4_FS2_wEI.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/audioldm2_6.wav"
+                        src="./samples/0019_Sad_4_FS2_wEI-L.wav"
                         type="audio/wav"
                       />
                       Your browser does not support the audio element.
@@ -480,30 +411,346 @@
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
-                      <source src="./samples/audiobox_6.wav" type="audio/wav" />
+                      <source src="./samples/0019_Sad_4_FS2_wEI-G&L.wav" type="audio/wav" />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size: 20px;">
+                    <span style="color: #d10def;">(Surprise)</span> I'm still reeling from the shock of it all.
+                  </td>
+                  <td>
+                    <audio controls="controls" style="width: 150px;">
+                      <source
+                        src="./samples/0013_Surprise_1_Daft-Exprt.wav"
+                        type="audio/wav"
+                      />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="controls" style="width: 150px;">
+                      <source src="./samples/0013_Surprise_1_FS2_wEI.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                   <td>
                     <audio controls="controls" style="width: 150px;">
                       <source
-                        src="./samples/tangoflux_6.wav"
+                        src="./samples/0013_Surprise_1_FS2_wEI-L.wav"
                         type="audio/wav"
                       />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="controls" style="width: 150px;">
+                      <source src="./samples/0013_Surprise_1_FS2_wEI-G&L.wav" type="audio/wav" />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size: 20px;">
+                    <span style="color: #d10def;">(Surprise)</span> This turn of events has me completely floored.
+                  </td>
+                  <td>
+                    <audio controls="controls" style="width: 150px;">
+                      <source
+                        src="./samples/0017_Surprise_3_Daft-Exprt.wav"
+                        type="audio/wav"
+                      />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="controls" style="width: 150px;">
+                      <source src="./samples/0017_Surprise_3_FS2_wEI.wav" type="audio/wav" />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="controls" style="width: 150px;">
+                      <source
+                        src="./samples/0017_Surprise_3_FS2_wEI-L.wav"
+                        type="audio/wav"
+                      />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls="controls" style="width: 150px;">
+                      <source src="./samples/0017_Surprise_3_FS2_wEI-G&L.wav" type="audio/wav" />
                       Your browser does not support the audio element.
                     </audio>
                   </td>
                 </tr>
             
-
               </tbody>
             </table>
 
-            The three general trends that can be observed in these examples—in
+            <!-- The three general trends that can be observed in these examples—in
             concurrence with the human evaluators—are (i) more audible presence
             of the events and (ii) better event-order reproduction (iii) higher quality audio in the
-            outputs of <span style="font-size: 24; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 19px; color: #6E93E6;">A</span><span style="font-size: 19px; color: #4A8A5C;">N</span><span style="font-size: 19px; color: #55AFAA;">G</span><span style="font-size: 19px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 19px; color: #993CAC;">L</span><span style="font-size: 19px; color: #C183C8;">U</span><span style="font-size: 19px; color: #B683BB;">X</span> </span> over other models.
-
+            outputs of <span style="font-size: 24; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 19px; color: #6E93E6;">A</span><span style="font-size: 19px; color: #4A8A5C;">N</span><span style="font-size: 19px; color: #55AFAA;">G</span><span style="font-size: 19px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 19px; color: #993CAC;">L</span><span style="font-size: 19px; color: #C183C8;">U</span><span style="font-size: 19px; color: #B683BB;">X</span> </span> over other models. -->
+            <table
+            class="table"
+            align="center"
+            style="table-layout: fixed; word-break: break-word; width: 100%; border-collapse: collapse;margin-left: 0; "
+          >
+            <thead>
+              <tr>
+                <th>
+                  Text Description
+                  <!-- <br> -->
+                  <!-- <div style="color:#007bff;font-size:medium;"> -->
+                  <!--  <span style="color:red">red</span>-prompt audios are from <a href="https://huggingface.co/spaces/declare-lab/tango">[demo]</a> -->
+                  <!-- </div> -->
+                </th>
+                
+                <th style="font-size: 20px;">Intensity-Low</th>
+                <th style="font-size: 20px;">Intensity-Medium</th>
+                <th style="font-size: 20px;">Intensity-High</th>
+                <!-- <th style="font-size: 20px; font-family: Times; font-weight: bold;"><span style="color: #4968D8;">T</span><span style="font-size: 16px; color: #6E93E6;">A</span><span style="font-size: 16px; color: #4A8A5C;">N</span><span style="font-size: 16px; color: #55AFAA;">G</span><span style="font-size: 16px; color: #D1A841;">O</span><span style="color: #B55BBA;">F</span><span style="font-size: 16px; color: #993CAC;">L</span><span style="font-size: 16px; color: #C183C8;">U</span><span style="font-size: 16px; color: #B683BB;">X</span> (Ours)</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #db1f1f;">(Angry)</span> Rat came and replied on the leaves.
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Angry_0/0017_000379_Angry_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Angry_0/0017_000379_Angry_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Angry_0/0017_000379_Angry_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #db1f1f;">(Angry)</span> Paul's teeth ached because of lemon.
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Angry_1/0016_000688_Angry_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Angry_0/0016_000688_Angry_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Angry_0/0016_000688_Angry_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #43d90d;">(Happy)</span> Now quicker the fiddle went.
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Happy_4/0015_000888_Happy_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Happy_4/0015_000888_Happy_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Happy_4/0015_000888_Happy_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #43d90d;">(Happy)</span> Am I an absolute pauper?
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Happy_5/0011_000822_Happy_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Happy_5/0011_000822_Happy_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Happy_5/0011_000822_Happy_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #0d6fde;">(Sad)</span> I must have two to fetch and carry.
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Sad_8/0011_001306_Sad_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Sad_8/0011_001306_Sad_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Sad_8/0011_001306_Sad_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #0d6fde;">(Sad)</span> A deafening chirruping rent the air.
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Sad_9/0018_001105_Sad_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Sad_9/0018_001105_Sad_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Sad_9/0018_001105_Sad_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #d10def;">(Surprise)</span> Do you think it's a woozle?
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Surprise_12/0016_001645_Surprise_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Surprise_12/0016_001645_Surprise_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Surprise_12/0016_001645_Surprise_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 20px;">
+                  <span style="color: #d10def;">(Surprise)</span> The nastiest things they saw were the cobwebs.
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Surprise_13/0014_001445_Surprise_L.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source src="./samples/Surprise_13/0014_001445_Surprise_M.wav" type="audio/wav" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+                <td>
+                  <audio controls="controls" style="width: 150px;">
+                    <source
+                      src="./samples/Surprise_13/0014_001445_Surprise_H.wav"
+                      type="audio/wav"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                </td>
+              </tr>
+            </table>
+            The audio samples are aligned with our human subjectives tests, including Mean Opinion Score (MOS) and Preference Score (PS). 
+            <br />
             <!-- <br></br> -->
             <hr />
             <!--<h2 id="Limitations">-->
@@ -521,17 +768,12 @@
             <div class="container">
               <p>
                 1. We share our
-                <a href="https://github.com/declare-lab/Tangoflux"
+                <a href="https://anonymous.4open.science/r/FastSpeech2PromptGuidance-5C07"
                   >code on GitHub</a
-                >, which aims to open source the audio generation model training
-                and evaluation for easier comparison.
-              </p>
-              <p>
-                <!-- 2. We are double checking the copy-right issue on open-sourcing our pretrained model. This will not take too long. -->
-                2. We have released our model <a href="https://huggingface.co/declare-lab/TangoFlux">checkpoints on HuggingFace</a> for reproducibility.
+                >, paper is under review.
               </p>
             </div>
-            <h2 id="Acknowledgement">
+            <!-- <h2 id="Acknowledgement">
               <font color="000093">Acknowledgement</font>
             </h2>
             <div class="container">
@@ -544,7 +786,7 @@
                   https://github.com/AudioLDM/AudioLDM.github.io
                 </a>
               </li>
-            </div>
+            </div> -->
           </section>
         </article>
       </main>
